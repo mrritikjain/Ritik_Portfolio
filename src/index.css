@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap");
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --variant-dark: .dark &;
+  --font-Outfit: "Outfit", sans-serif;
+  --font-Plus: "Plus Jakarta Sans", sans-serif;
+}
+
+/* Smooth theme change */
+body {
+  @apply transition-colors duration-300;
+  font-family: "Outfit", sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.theme-color {
+  color: #4960d4;
+}
+.theme-btn_Primary {
+  border: 1px solid #4960d4;
+  color: #fff;
+  background-color: #4960d4;
+  border-radius: 5px;
+}
+.theme-btn_Secondary {
+  border: 1px solid #4960d4;
+  color: #4960d4;
+  background-color: transparent;
+  border-radius: 5px;
+}
