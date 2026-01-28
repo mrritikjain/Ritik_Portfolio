@@ -1,24 +1,25 @@
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { RiSunLine, RiMoonLine } from "react-icons/ri";
+import { Link } from "react-router";
 
 const Header = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <header className="flex justify-between items-center px-6 py-4">
+    <header className="flex justify-between items-center py-2 h-[40px] ">
       <h1 className="text-2xl font-bold font-Outfit">
-        Ritik<span className="text-[#4960d4]">.</span>
+        Ritik<span className="theme-color">.</span>
       </h1>
       <div className="text-md flex gap-10">
-        <a href="">Home</a>
-        <a href="">Projects</a>
-        <a href="">Experience</a>
-        <a href="">Education</a>
-        <a href="">Contact</a>
+        <Link to="#home">Home</Link>
+        <Link to="#projects">Projects</Link>
+        <Link to="#experience">Experience</Link>
+        <Link to="#education">Education</Link>
+        <Link to="#contact">Contact</Link>
         <button
           onClick={toggleTheme}
-          className="text-2xl cursor-pointer hover:text-[#4960d4]"
+          className="text-2xl cursor-pointer hover:text-[var(--hover)]"
         >
           {theme === "dark" ? <RiSunLine /> : <RiMoonLine />}
         </button>

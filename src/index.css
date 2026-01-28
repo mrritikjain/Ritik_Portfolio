@@ -6,6 +6,10 @@
   --variant-dark: .dark &;
   --font-Outfit: "Outfit", sans-serif;
   --font-Plus: "Plus Jakarta Sans", sans-serif;
+  --hover: #4960d4;
+  --color-dark-theme: #bababa;
+  --color-light-theme: #262626;
+  --shadow: 0 0 64px hsla(230, 62%, 56%, 0.3);
 }
 
 /* Smooth theme change */
@@ -29,10 +33,51 @@ h6 {
   color: #fff;
   background-color: #4960d4;
   border-radius: 5px;
+  padding: 1rem 2rem;
 }
-.theme-btn_Secondary {
+.theme-btn_Secondary,
+.tab {
   border: 1px solid #4960d4;
   color: #4960d4;
   background-color: transparent;
-  border-radius: 5px;
+  border-radius: 3px;
+  padding: 1rem 2rem;
+  transition: 200ms;
+}
+.tab {
+  padding: 5px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.theme-btn_Primary:hover .theme-btn_Secondary:hover,
+.theme-btn_Primary:hover,
+.tab.active {
+  box-shadow: 0 8px 24px hsla(230, 62%, 56%, 0.2);
+  transform: translateY(-3px);
+  background-color: #4960d4;
+  color: #fff;
+  transition: 200ms;
+}
+/* Custom Designer Scrollbar */
+.designer-scroll::-webkit-scrollbar {
+  height: 10px; /* Thicker for better usability */
+}
+
+.designer-scroll::-webkit-scrollbar-track {
+  background: transparent;
+  margin: 0 20px;
+}
+
+.designer-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #4960d4, #a3b1ff);
+  border-radius: 100vh;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: all 0.3s ease;
+}
+
+.designer-scroll::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #3b4ecc, #4960d4);
+  border: 1px solid transparent;
+  background-clip: content-box;
 }
