@@ -9,7 +9,7 @@ const Projects = () => {
       desc: "Luxury haircare e-commerce platform built with WordPress and WooCommerce.",
       stack: ["WordPress", "WooCommerce", "Elementor"],
       url: "https://ministryofmane.com/",
-      category: "Freelance",
+      category: "Work Experience",
     },
     {
       image: "../../public/arisecapital.png",
@@ -17,14 +17,14 @@ const Projects = () => {
       desc: "Investment platform for institutional and HNW investors.",
       stack: ["WordPress", "Elementor"],
       url: "https://arisecapinvest.net/",
-      category: "Freelance",
+      category: "Work Experience",
     },
     {
-      image: "../../public/project1.png",
-      title: "Task Management App",
-      desc: "A powerful task manager with drag-and-drop functionality built with React.",
-      stack: ["React", "Redux", "Node.js"],
-      url: "#",
+      image: "../../public/alltimehealthclub.png",
+      title: "All Time Health Club",
+      desc: "A modern fitness club website developed using WordPress and Elementor",
+      stack: ["WordPress", "Elementor"],
+      url: "https://alltimehealthclub.com/",
       category: "Learning",
     },
     {
@@ -33,23 +33,39 @@ const Projects = () => {
       desc: "Curated grooming products platform for style-conscious men.",
       stack: ["HTML", "CSS", "JS"],
       url: "https://gatsbyindia.com/",
-      category: "Freelance",
+      category: "Work Experience",
     },
     {
-      image: "../../public/project2.png",
-      title: "Weather Dashboard",
-      desc: "Real-time weather application using OpenWeatherMap API.",
-      stack: ["JavaScript", "Fetch API", "Tailwind"],
-      url: "#",
+      image: "../../public/Focus_analytics.png",
+      title: "Focus Analytics",
+      desc: "A data analytics dashboard built with modern web technologies, visualizing key metrics and performance insights.",
+      stack: ["React", "Custom Hook", "CSS"],
+      url: "https://focusanalytics.netlify.app/",
       category: "Learning",
     },
     {
-      image: "../../public/bigcatadventures.png",
-      title: "Big Cat Adventures",
-      desc: "Wildlife safari booking and exploration platform.",
-      stack: ["WordPress", "CMS"],
-      url: "https://bigcatsadventures.com/",
-      category: "Freelance",
+      image: "../../public/job_tracker.png",
+      title: "Job Tracker",
+      desc: "A JavaScript-powered job tracker app that helps users organize and manage job applications efficiently.",
+      stack: ["HTML", "CSS", "JS"],
+      url: "https://jobtrackerjs.netlify.app/",
+      category: "Learning",
+    },
+    {
+      image: "../../public/vincent.png",
+      title: "Vincent Infratech",
+      desc: "A WordPress website for an infrastructure services company, designed with industry-focused content.",
+      stack: ["WordPress", "Elementor"],
+      url: "https://vincentinfratech.com/",
+      category: "Work Experience",
+    },
+    {
+      image: "../../public/velnourishpharma.png",
+      title: "Velnourish Pharma",
+      desc: "A professional WordPress site for a pharmaceutical business, showcasing products, company information.",
+      stack: ["WordPress", "Elementor"],
+      url: "https://velnourishpharma.com/",
+      category: "Learning",
     },
   ]);
   return (
@@ -59,11 +75,11 @@ const Projects = () => {
       </h3>
       <h4 className="text-lg theme-color font-semibold">Cases of my work</h4>
       <div className="flex flex-wrap justify-center gap-4 my-10">
-        {["All", "Freelance", "Learning"].map((category) => (
+        {["All", "Work Experience", "Learning"].map((category) => (
           <button
             key={category}
             onClick={() => setActive(category)}
-            className={`px-8 py-2.5 rounded-full border border-[#4960d4] text-base font-medium transition-all duration-300 transform
+            className={`px-8 py-2.5 rounded-full border border-[#4960d4] text-base font-medium transition-all duration-300 transform hover:cursor-pointer
               ${
                 active === category
                   ? "bg-[#4960d4] text-white shadow-lg -translate-y-1 scale-105 ring-2 ring-[#4960d4] ring-offset-2"
