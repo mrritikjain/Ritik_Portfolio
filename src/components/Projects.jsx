@@ -4,7 +4,7 @@ const Projects = () => {
   const [active, setActive] = useState("All");
   const [projects] = useState([
     {
-      image: "../../public/ministryofmane.png",
+      image: "/ministryofmane.png",
       title: "Ministry Of Mane",
       desc: "Luxury haircare e-commerce platform built with WordPress and WooCommerce.",
       stack: ["WordPress", "WooCommerce", "Elementor"],
@@ -12,7 +12,7 @@ const Projects = () => {
       category: "Work Experience",
     },
     {
-      image: "../../public/arisecapital.png",
+      image: "/arisecapital.png",
       title: "Arise Capital",
       desc: "Investment platform for institutional and HNW investors.",
       stack: ["WordPress", "Elementor"],
@@ -20,7 +20,7 @@ const Projects = () => {
       category: "Work Experience",
     },
     {
-      image: "../../public/alltimehealthclub.png",
+      image: "/alltimehealthclub.png",
       title: "All Time Health Club",
       desc: "A modern fitness club website developed using WordPress and Elementor",
       stack: ["WordPress", "Elementor"],
@@ -28,7 +28,7 @@ const Projects = () => {
       category: "Learning",
     },
     {
-      image: "../../public/gatsby.png",
+      image: "/gatsby.png",
       title: "Gatsby India",
       desc: "Curated grooming products platform for style-conscious men.",
       stack: ["HTML", "CSS", "JS"],
@@ -36,7 +36,7 @@ const Projects = () => {
       category: "Work Experience",
     },
     {
-      image: "../../public/Focus_analytics.png",
+      image: "/Focus_analytics.png",
       title: "Focus Analytics",
       desc: "A data analytics dashboard built with modern web technologies, visualizing key metrics and performance insights.",
       stack: ["React", "Custom Hook", "CSS"],
@@ -44,7 +44,7 @@ const Projects = () => {
       category: "Learning",
     },
     {
-      image: "../../public/job_tracker.png",
+      image: "/job_tracker.png",
       title: "Job Tracker",
       desc: "A JavaScript-powered job tracker app that helps users organize and manage job applications efficiently.",
       stack: ["HTML", "CSS", "JS"],
@@ -52,7 +52,7 @@ const Projects = () => {
       category: "Learning",
     },
     {
-      image: "../../public/vincent.png",
+      image: "/vincent.png",
       title: "Vincent Infratech",
       desc: "A WordPress website for an infrastructure services company, designed with industry-focused content.",
       stack: ["WordPress", "Elementor"],
@@ -60,7 +60,7 @@ const Projects = () => {
       category: "Work Experience",
     },
     {
-      image: "../../public/velnourishpharma.png",
+      image: "/velnourishpharma.png",
       title: "Velnourish Pharma",
       desc: "A professional WordPress site for a pharmaceutical business, showcasing products, company information.",
       stack: ["WordPress", "Elementor"],
