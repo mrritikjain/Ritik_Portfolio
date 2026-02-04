@@ -69,17 +69,23 @@ const Projects = () => {
     },
   ]);
   return (
-    <div className="flex flex-col justify-center items-center">
-      <h3 className="text-4xl font-semibold leading-tight tracking-normal my-2">
+    <div
+      id="projects"
+      className="flex flex-col justify-center items-center py-14 overflow-hidden w-full"
+    >
+      <h3 className="text-4xl font-semibold leading-tight tracking-normal my-4 text-center text-gray-900 dark:text-white px-4">
         Selected Projects
       </h3>
-      <h4 className="text-lg theme-color font-semibold">Cases of my work</h4>
-      <div className="flex flex-wrap justify-center gap-4 my-10">
+      <h4 className="text-lg theme-color font-semibold mb-8 text-center px-4">
+        Cases of my work
+      </h4>
+
+      <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-10 px-4">
         {["All", "Work Experience", "Learning"].map((category) => (
           <button
             key={category}
             onClick={() => setActive(category)}
-            className={`px-8 py-2.5 rounded-full border border-[#4960d4] text-base font-medium transition-all duration-300 transform hover:cursor-pointer
+            className={`px-6 md:px-8 py-2 md:py-2.5 rounded-full border border-[#4960d4] text-sm md:text-base font-medium transition-all duration-300 transform cursor-pointer
               ${
                 active === category
                   ? "bg-[#4960d4] text-white shadow-lg -translate-y-1 scale-105 ring-2 ring-[#4960d4] ring-offset-2"
@@ -92,7 +98,7 @@ const Projects = () => {
       </div>
 
       <div className="w-full relative group pb-10">
-        <div className="mt-10 flex overflow-x-auto snap-x snap-mandatory gap-8 pb-8 px-4 designer-scroll">
+        <div className="mt-10 flex overflow-x-auto snap-x snap-mandatory gap-6 md:gap-10 pb-8 px-4 md:px-0 designer-scroll scrollbar-hide">
           {projects
             .filter(
               (project) => project.category === active || active === "All",
@@ -100,38 +106,38 @@ const Projects = () => {
             .map((project) => (
               <div
                 key={project.title}
-                className="min-w-[85vw] md:min-w-[500px] lg:min-w-[600px] snap-center bg-gray-50 dark:bg-[#1a1a1a] rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl border border-gray-200 dark:border-gray-800 flex flex-col group/card transition-all duration-300"
+                className="min-w-[85vw] md:min-w-[65%] w-[85vw] md:w-[65%] h-auto snap-start bg-white dark:bg-[#1a1c23] rounded-3xl overflow-hidden shadow-sm hover:shadow-xl border border-gray-100 dark:border-gray-800 flex flex-col group/card transition-all duration-300 flex-shrink-0"
               >
-                {/* Image Section - Top */}
-                <div className="relative w-full h-48 md:h-56 overflow-hidden">
-                  <div className="absolute inset-0 bg-[#4960d4]/10 dark:bg-[#4960d4]/20 mix-blend-overlay z-10"></div>
+                {/* Image Section */}
+                <div className="relative w-full h-48 md:h-72 overflow-hidden">
+                  <div className="absolute inset-0 bg-[#4960d4]/5 dark:bg-[#4960d4]/10 mix-blend-overlay z-10"></div>
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110 grayscale-0 md:grayscale group-hover/card:grayscale-0"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110 md:grayscale group-hover/card:grayscale-0"
                   />
-                  <div className="absolute top-3 left-3 z-20">
+                  <div className="absolute top-4 left-4 z-20">
                     <span className="px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 dark:bg-black/80 text-[#4960d4] backdrop-blur-sm shadow-sm">
                       {project.category}
                     </span>
                   </div>
                 </div>
 
-                {/* Content Section - Bottom */}
-                <div className="p-6 flex flex-col justify-between flex-grow relative">
+                {/* Content Section */}
+                <div className="p-6 md:p-8 w-full flex flex-col justify-between grow">
                   <div>
-                    <div className="flex justify-between items-start mb-2">
-                      <h3 className="text-2xl font-bold text-gray-800 dark:text-white leading-tight">
+                    <div className="flex justify-between items-start mb-4">
+                      <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white leading-tight">
                         {project.title}
                       </h3>
                       <a
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 rounded-full bg-[#4960d4]/10 dark:bg-[#4960d4]/20 text-[#4960d4] hover:bg-[#4960d4] hover:text-white transition-all duration-300 group-hover/card:rotate-45"
+                        className="p-2.5 rounded-full bg-[#4960d4]/10 dark:bg-[#4960d4]/20 text-[#4960d4] hover:bg-[#4960d4] hover:text-white transition-all duration-300 group-hover/card:rotate-45 shadow-sm"
                       >
                         <svg
-                          className="w-5 h-5"
+                          className="w-5 h-5 md:w-6 md:h-6"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -146,16 +152,16 @@ const Projects = () => {
                       </a>
                     </div>
 
-                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
+                    <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base lg:text-lg mb-6 line-clamp-3 md:line-clamp-none">
                       {project.desc}
                     </p>
                   </div>
 
-                  <div className="flex flex-wrap gap-2 mt-auto">
-                    {project.stack.slice(0, 3).map((tech) => (
+                  <div className="flex flex-wrap gap-2 md:gap-3 mt-auto">
+                    {project.stack.map((tech) => (
                       <span
                         key={tech}
-                        className="text-[10px] font-semibold px-2 py-1 rounded bg-gray-200 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-transparent group-hover/card:border-[#4960d4]/30 transition-colors"
+                        className="text-[10px] md:text-xs font-semibold px-3 py-1 md:px-4 md:py-1.5 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 border border-transparent group-hover/card:border-[#4960d4]/30 transition-all"
                       >
                         {tech}
                       </span>

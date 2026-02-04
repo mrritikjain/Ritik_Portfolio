@@ -40,30 +40,30 @@ const Education = () => {
   return (
     <div
       id="education"
-      className="flex flex-col justify-center items-center my-14 px-4"
+      className="flex flex-col justify-center items-center my-14 px-4 md:px-8 max-w-6xl mx-auto"
     >
-      <h3 className="text-4xl font-semibold leading-tight tracking-normal my-4 text-center">
+      <h3 className="text-4xl font-semibold leading-tight tracking-normal my-4 text-center text-gray-900 dark:text-white">
         Education
       </h3>
 
       {/* Tabs */}
-      <div className="flex gap-8 mb-10">
+      <div className="flex gap-8 mb-10 overflow-x-auto w-full justify-center scrollbar-hide">
         <button
           onClick={() => setActiveTab("degree")}
-          className={`text-lg font-medium cursor-pointer transition-colors duration-300 ${
+          className={`text-lg font-medium cursor-pointer transition-colors duration-300 whitespace-nowrap pb-2 ${
             activeTab === "degree"
               ? "text-[#4960d4] border-b-2 border-[#4960d4]"
-              : "text-gray-500 hover:text-gray-300"
+              : "text-gray-500 hover:text-gray-800 dark:hover:text-gray-300"
           }`}
         >
           Degree
         </button>
         <button
           onClick={() => setActiveTab("certificate")}
-          className={`text-lg font-medium cursor-pointer transition-colors duration-300 ${
+          className={`text-lg font-medium cursor-pointer transition-colors duration-300 whitespace-nowrap pb-2 ${
             activeTab === "certificate"
               ? "text-[#4960d4] border-b-2 border-[#4960d4]"
-              : "text-gray-500 hover:text-gray-300"
+              : "text-gray-500 hover:text-gray-800 dark:hover:text-gray-300"
           }`}
         >
           Certification
@@ -71,19 +71,23 @@ const Education = () => {
       </div>
 
       {/* Content */}
-      <div className="w-full max-w-4xl space-y-4">
+      <div className="w-full max-w-4xl space-y-6">
         {currentData.map((item, index) => (
           <div
             key={index}
-            className="flex items-center gap-6 p-6 rounded-2xl bg-[#1a1c23] border border-gray-800 hover:border-[#4960d4] transition-all duration-300"
+            className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 p-6 rounded-2xl bg-white dark:bg-[#1a1c23] border border-gray-100 dark:border-gray-800 shadow-sm hover:border-[#4960d4] dark:hover:border-[#4960d4] transition-all duration-300"
           >
-            <div className="text-3xl text-[#4960d4] bg-[#4960d41a] p-4 rounded-xl">
+            <div className="text-3xl text-[#4960d4] bg-[#4960d41a] p-4 rounded-xl shrink-0">
               {item.icon}
             </div>
-            <div>
-              <h4 className="text-xl font-bold text-white">{item.title}</h4>
+            <div className="text-center md:text-left">
+              <h4 className="text-xl font-bold text-gray-900 dark:text-white">
+                {item.title}
+              </h4>
               <p className="text-[#4960d4] font-medium">{item.institution}</p>
-              <p className="text-sm text-gray-400 mt-1">{item.period}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                {item.period}
+              </p>
             </div>
           </div>
         ))}
