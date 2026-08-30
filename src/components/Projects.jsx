@@ -4,6 +4,22 @@ const Projects = () => {
   const [active, setActive] = useState("All");
   const [projects] = useState([
     {
+      image: "/ammbhome.png",
+      title: "Adarsh Mahila Mahavidyalaya",
+      desc: "Developed and maintained a professional WordPress website for a college, providing students and visitors with information about academics, departments, events, recruitment, notices, and institutional activities.",
+      stack: ["WordPress", "Elementor", "JavaScript"],
+      url: "https://ammb.ac.in/",
+      category: "Work Experience",
+    },
+    {
+      image: "/virtualtrade.png",
+      title: "Virtual Trade",
+      desc: "Built a MERN-based virtual trading platform that helps beginner traders learn stock trading using virtual credits without risking real money. Includes market data, portfolio tracking, watchlists, and AI-powered stock recommendations.",
+      stack: ["React", "Context API", "Node.js", "Express", "MongoDB"],
+      url: "https://virtualtrade.netlify.app/",
+      category: "Learning",
+    },
+    {
       image: "/ministryofmane.png",
       title: "Ministry Of Mane",
       desc: "Luxury haircare e-commerce platform built with WordPress and WooCommerce.",
